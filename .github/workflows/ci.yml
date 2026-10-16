@@ -17,7 +17,18 @@ jobs:
   lint-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-      - uses: pre-commit/action@v3.0.1
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+      - name: Install dependencies
+        run: |
+          poetry install --with dev
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.1
       - name: Tests
         run: make test

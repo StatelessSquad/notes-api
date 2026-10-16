@@ -3,7 +3,6 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: weekly }
-  # DevEx adds the app's ecosystem here (npm, pip, gomod, docker, ...):
-  # - package-ecosystem: npm
-  #   directory: /
-  #   schedule: { interval: weekly }
+  - package-ecosystem: pip
+    directory: /
+    schedule: { interval: weekly }

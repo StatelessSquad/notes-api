@@ -1,10 +1,11 @@
 .PHONY: setup dev test lint
-setup: ## install toolchain + hooks (edit for your stack)
-	@command -v pre-commit >/dev/null || pipx install pre-commit || pip install --user pre-commit
-	@pre-commit install
+setup: ## install toolchain + hooks
+	@command -v poetry >/dev/null || curl -sSL https://install.python-poetry.org | python3 -
+	@poetry install --with dev
+	@poetry run pre-commit install
 dev: ## run locally
-	@echo "TODO: define dev for {{STACK}}"
+	@poetry run uvicorn src.notes_api.main:app --reload
 test: ## run tests
-	@echo "TODO: define test for {{STACK}}"
+	@poetry run pytest
 lint: ## lint
-	@pre-commit run -a
+	@poetry run pre-commit run -a
