@@ -13,7 +13,7 @@ jobs:
         with: { fetch-depth: 0 }
       # gitleaks via its official image: free for organizations (gitleaks-action needs a paid license for orgs)
       - name: gitleaks (full history)
-        run: docker run --rm -v \"$PWD:/repo\" zricethezav/gitleaks:latest git /repo --redact --no-banner --exit-code 1
+        run: docker run --rm -v "$PWD:/repo" zricethezav/gitleaks:latest git /repo --redact --no-banner --exit-code 1
   lint-and-test:
     runs-on: ubuntu-latest
     steps:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: \"3.12\"
+          python-version: "3.12"
       - name: Install pipx
         run: |
           python3 -m pip install --user pipx
