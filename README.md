@@ -1,11 +1,11 @@
-# {{APP_NAME}}
+# notes-api
 
-{{ONE_LINE_DESCRIPTION}}
+tiny personal notes service
 
 > Created from `StatelessSquad/app-template` by DevEx. Replace the `{{...}}` placeholders in your bootstrap PR.
 
 ## Stack
-- {{STACK}}
+- Python 3.12 + FastAPI + SQLModel on SQLite
 
 ## Getting started
 ```bash
