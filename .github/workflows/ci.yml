@@ -29,7 +29,7 @@ jobs:
       - name: Install Poetry
         run: pipx install poetry
       - name: Cache Poetry
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/pypoetry
           key: poetry-${{ runner.os }}-${{ hashFiles('poetry.lock') }}
