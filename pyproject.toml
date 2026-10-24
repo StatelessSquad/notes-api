@@ -3,7 +3,7 @@ name = "notes-api"
 version = "0.1.0"
 description = "tiny personal notes service"
 authors = ["Your Name <you@example.com>"]
-license = "MIT"
+license = { text = "Proprietary: StateLess Squad, all rights reserved" }
 readme = "README.md"
 packages = [{include = "notes_api", from = "src"}]
 
