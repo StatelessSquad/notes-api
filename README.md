@@ -26,3 +26,7 @@ tests/          tests
 - Trunk-based: short-lived branches `feat/...`, `fix/...`, `chore/...`; every change lands via PR into `main`.
 - Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`...). Semantic versioning via tags.
 - CI must pass (lint, tests, secret scan) before merge. See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
+
+## License
+
+Proprietary: © 2026 StateLess Squad, all rights reserved. See [LICENSE](LICENSE).
